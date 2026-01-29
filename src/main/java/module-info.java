@@ -2,7 +2,7 @@ module gr.unipi.meallab {
     // Απαραίτητα JavaFX για το GUI
     requires javafx.controls;
     requires javafx.fxml;
-    requires javafx.graphics;
+    requires transitive javafx.graphics;
 
     // Βιβλιοθήκη Jackson για τη διαχείριση δεδομένων JSON
     requires com.fasterxml.jackson.databind;
@@ -14,8 +14,11 @@ module gr.unipi.meallab {
        για να μετατρέπει το JSON σε αντικείμενα Java (αποσειριοποίηση)*/
     opens gr.unipi.meallab.model to com.fasterxml.jackson.databind;
 
-    // Εξαγωγή του κύριου πακέτου
+    // Εξαγωγή του κύριου πακέτου και μοντέλου και service
     exports gr.unipi.meallab;
+    exports gr.unipi.meallab.model;
+
+
 }
 
 

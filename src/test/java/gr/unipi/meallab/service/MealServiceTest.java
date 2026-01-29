@@ -34,6 +34,8 @@ public class MealServiceTest {
         //3ος έλεγχος: Επαληθεύω ότι η συνταγή έχει το όνομα που ζητήσαμε.
         assertTrue(results.get(0).getName().contains("Chicken"), 
                    "Το όνομα της συνταγής πρέπει να περιέχει τη λέξη 'Chicken'.");
+              
+        
     }
     
     /* Έλεγχος για ανάκτηση συνταγής με συγκεκριμένο ID.
@@ -58,6 +60,13 @@ public class MealServiceTest {
         
         // 3os έλεγχος: Η συνταγή περιέχει οδηγίες (δεν είναι null).
         assertNotNull(recipe.getInstructions(), "Οι οδηγίες της συνταγής δεν θα έπρεπε να είναι null.");
+   
+        //4ος  Έλεγχος ύπαρξης και μορφοποίησης υλικών.
+        assertNotNull(recipe.getIngredients(), "Τα υλικά δεν πρέπει να είναι null.");
+        assertTrue(recipe.getIngredients().contains("■"), "Τα υλικά πρέπει να περιέχουν το σύμβολο ■.");
+        assertTrue(recipe.getIngredients().contains("\n"), "Τα υλικά πρέπει να είναι χωρισμένα με αλλαγή γραμμής.");
+    
+    
     }
   
     //3. Έλεγχος για την ανάκτηση τυχαίας συνταγής.
@@ -77,6 +86,12 @@ public class MealServiceTest {
         
         //3os έλεγχος: Η συνταγή πρέπει να έχει οπωσδήποτε οδηγίες μαγειρέματος.
         assertNotNull(randomRecipe.getInstructions(), "Οι οδηγίες της συνταγής δεν πρέπει να είναι κενές.");
+        
+        //4ος  Έλεγχος ύπαρξης και μορφοποίησης υλικών.
+        assertNotNull(randomRecipe.getIngredients(), "Τα υλικά δεν πρέπει να είναι null.");
+        assertTrue(randomRecipe.getIngredients().contains("■"), "Τα υλικά πρέπει να περιέχουν το σύμβολο ■.");
+        assertTrue(randomRecipe.getIngredients().contains("\n"), "Τα υλικά πρέπει να είναι χωρισμένα με αλλαγή γραμμής.");
+        
     }
 }
 

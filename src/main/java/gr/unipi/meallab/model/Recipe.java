@@ -33,9 +33,9 @@ public class Recipe {
 	private String area;
 
 	/*
-	 * Αυτό δεν έχει @JsonProperty γιατί το API στέλνει τα υλικά χύμα σε πολλά
+	 * Αυτό δεν έχει @JsonProperty γιατί το API στέλνει τα υλικά σε πολλά
 	 * πεδία. Θα ενώσουμε χειροκίνητα τα υλικά με τις ποσότητές τους σε ενιαίο
-	 * κείμενο
+	 * κείμενο.
 	 */
 	private String ingredients;
 

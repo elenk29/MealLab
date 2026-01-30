@@ -163,7 +163,7 @@ public class MealLabController {
 				 * Χρήση TypeReference για ασφαλή φόρτωση δεδομένων. Επειδή η Java κατά την
 				 * εκτέλεση δεν θυμάται τι είδους αντικείμενα περιέχουν οι λίστες (Type
 				 * Erasure), χρησιμοποιούμε το TypeReference προκειμένου η βιβλιοθήκη Jackson να
-				 * μετατρέψει το JSON σε Συνταγές (Recipe) και όχι σε γενικά αντικείμενα
+				 * μετατρέψει το JSON σε Συνταγές (Recipe) και όχι σε γενικά αντικείμενα.
 				 */
 
 				TypeReference<Map<String, List<Recipe>>> typeRef = new TypeReference<>() {

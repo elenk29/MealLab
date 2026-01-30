@@ -17,7 +17,7 @@ module gr.unipi.meallab {
 	 */
 	opens gr.unipi.meallab.model to com.fasterxml.jackson.databind;
 
-	// Εξαγωγή του κύριου πακέτου και μοντέλου και service
+	// Εξαγωγή του κύριου πακέτου και μοντέλου.
 	exports gr.unipi.meallab;
 	exports gr.unipi.meallab.model;
 
